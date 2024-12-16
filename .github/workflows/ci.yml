@@ -141,6 +141,9 @@ jobs:
         repository: freqtrade/freqtrade
         path: './freqtrade_tmp'
 
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+
     - name: Installation (uses freqtrade dependencies)
       run: |
         cp -r ./freqtrade_tmp/build_helpers .
